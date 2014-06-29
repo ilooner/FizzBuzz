@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.j2ee.earproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/j2ee-earproject/2">
+            <name>FizzBuzz</name>
+            <minimum-ant-version>1.6.5</minimum-ant-version>
+            <web-module-libraries/>
+            <web-module-additional-libraries>
+                <library>
+                    <file>${reference.FizzBuzz-war.dist-ear}</file>
+                    <path-in-war>/</path-in-war>
+                </library>
+                <library>
+                    <file>${reference.FizzBuzz-ejb.dist-ear}</file>
+                    <path-in-war>/</path-in-war>
+                </library>
+                <library>
+                    <file>${file.reference.twilio-java-sdk-3.4.5-jar-with-dependencies.jar}</file>
+                    <path-in-war>/</path-in-war>
+                </library>
+                <library>
+                    <file>${libs.MySQLDriver.classpath}</file>
+                    <path-in-war>/lib</path-in-war>
+                </library>
+            </web-module-additional-libraries>
+        </data>
+        <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
+            <reference>
+                <foreign-project>FizzBuzz-ejb</foreign-project>
+                <artifact-type>j2ee_ear_archive</artifact-type>
+                <script>build.xml</script>
+                <target>dist-ear</target>
+                <clean-target>clean-ear</clean-target>
+                <id>dist-ear</id>
+            </reference>
+            <reference>
+                <foreign-project>FizzBuzz-war</foreign-project>
+                <artifact-type>j2ee_ear_archive</artifact-type>
+                <script>build.xml</script>
+                <target>dist-ear</target>
+                <clean-target>clean-ear</clean-target>
+                <id>dist-ear</id>
+            </reference>
+        </references>
+    </configuration>
+</project>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="https://www.tricktry.com/webresources/NumberGatherer" numDigits="3">
+        <Say>Please enter a fizz buzz number.</Say>
+    </Gather>
+    <!-- If customer doesn't input anything, prompt and try again. -->
+    <Say>Sorry, I didn't get your response.</Say>
+</Response>
